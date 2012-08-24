@@ -1,13 +1,7 @@
 #!/bin/sh
 
-HADOOP_HOME="/usr/lib/hadoop"
-
-HADOOP_JAR="`echo $HADOOP_HOME/hadoop-*-core.jar`"
-STREAMING_JAR="`echo $HADOOP_HOME/contrib/streaming/hadoop-*-streaming.jar`"
-
-if STREAMING_JAR==""; then
-    STREAMING_JAR="`echo $HADOOP_HOME/contrib/streaming/hadoop-streaming-*.jar`"
-fi
+HADOOP_JAR="$HOME/hadoop-core.jar"
+STREAMING_JAR="$HOME/contrib/streaming/hadoop-streaming.jar"
 
 rm -rf classes 2> /dev/null
 rm feathers.jar 2> /dev/null
